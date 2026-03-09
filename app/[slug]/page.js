@@ -37,23 +37,53 @@ export default async function BookingPage({ params }) {
       <main className="flex flex-1 flex-col lg:flex-row">
         {/* Left panel — info */}
         <div className="flex flex-col items-start justify-center gap-6 px-8 py-12 lg:w-[420px] lg:border-r lg:border-zinc-200 lg:px-12 lg:py-16">
-          {member.image ? (
-            <Image
-              src={member.image}
-              alt={member.name}
-              width={160}
-              height={160}
-              className="h-40 w-40 rounded-2xl object-cover shadow-md"
-            />
-          ) : (
-            <div
-              className={`flex h-40 w-40 items-center justify-center rounded-2xl ${member.color} text-4xl font-bold text-white shadow-md`}
-            >
-              {member.initials}
+          {/* Mobile: horizontal row with pfp + name/title */}
+          <div className="flex items-center gap-4 lg:hidden">
+            {member.image ? (
+              <Image
+                src={member.image}
+                alt={member.name}
+                width={80}
+                height={80}
+                className="h-20 w-20 rounded-2xl object-cover shadow-md"
+              />
+            ) : (
+              <div
+                className={`flex h-20 w-20 items-center justify-center rounded-2xl ${member.color} text-2xl font-bold text-white shadow-md`}
+              >
+                {member.initials}
+              </div>
+            )}
+            <div>
+              <h1 className="text-2xl font-bold tracking-tight text-zinc-900">
+                {member.name}
+              </h1>
+              <p className="mt-1 text-base font-medium text-zinc-500">
+                {member.role}
+              </p>
             </div>
-          )}
+          </div>
 
-          <div className="text-left">
+          {/* Desktop: large image + name/title stacked */}
+          <div className="hidden lg:block">
+            {member.image ? (
+              <Image
+                src={member.image}
+                alt={member.name}
+                width={160}
+                height={160}
+                className="h-40 w-40 rounded-2xl object-cover shadow-md"
+              />
+            ) : (
+              <div
+                className={`flex h-40 w-40 items-center justify-center rounded-2xl ${member.color} text-4xl font-bold text-white shadow-md`}
+              >
+                {member.initials}
+              </div>
+            )}
+          </div>
+
+          <div className="hidden lg:block">
             <h1 className="text-3xl font-bold tracking-tight text-zinc-900">
               {member.name}
             </h1>
@@ -62,7 +92,13 @@ export default async function BookingPage({ params }) {
             </p>
           </div>
 
-          <p className="max-w-sm whitespace-pre-line text-center text-base leading-relaxed text-zinc-600 lg:text-left">
+          {/* Mobile: short copy */}
+          <p className="text-base font-medium text-zinc-600 lg:hidden">
+            Let&apos;s chat!
+          </p>
+
+          {/* Desktop: full bio */}
+          <p className="hidden max-w-sm whitespace-pre-line text-left text-base leading-relaxed text-zinc-600 lg:block">
             {member.bio}
           </p>
 
