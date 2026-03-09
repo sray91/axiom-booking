@@ -86,11 +86,11 @@ export default async function BookingPage({ params }) {
         </div>
 
         {/* Right panel — calendar */}
-        <div className="flex flex-1 items-stretch p-4 lg:p-8">
+        <div className="flex min-h-[700px] flex-1 items-stretch p-4 lg:p-8">
           <iframe
             src={member.calendarUrl}
             className="w-full flex-1 rounded-xl border border-zinc-200 bg-white shadow-sm dark:border-zinc-800"
-            frameBorder="0"
+            style={{ border: 0 }}
             title={`Book a meeting with ${member.name}`}
           />
         </div>
