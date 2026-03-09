@@ -5,7 +5,14 @@ import { team } from "./data/team";
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col items-center bg-zinc-50 px-4 py-16 dark:bg-zinc-950">
-      <header className="mb-12 text-center">
+      <header className="mb-12 flex flex-col items-center text-center">
+        <Image
+          src="/axiom-dark-logo.png"
+          alt="Axiom"
+          width={160}
+          height={48}
+          className="mb-8 h-12 w-auto"
+        />
         <h1 className="text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
           Book a Meeting
         </h1>
