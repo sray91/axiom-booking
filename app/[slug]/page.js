@@ -19,9 +19,9 @@ export default async function BookingPage({ params }) {
   if (!member) notFound();
 
   return (
-    <div className="flex min-h-screen flex-col bg-white dark:bg-zinc-950">
+    <div className="flex min-h-screen flex-col bg-white">
       {/* Top nav with centered logo */}
-      <header className="flex items-center justify-center border-b border-zinc-200 px-6 py-4 dark:border-zinc-800">
+      <header className="flex items-center justify-center border-b border-zinc-200 px-6 py-4">
         <Link href="/">
           <Image
             src="/axiom-logo.png"
@@ -36,7 +36,7 @@ export default async function BookingPage({ params }) {
       {/* Landing page content */}
       <main className="flex flex-1 flex-col lg:flex-row">
         {/* Left panel — info */}
-        <div className="flex flex-col items-center justify-center gap-6 px-8 py-12 lg:w-[420px] lg:items-start lg:border-r lg:border-zinc-200 lg:px-12 lg:py-16 dark:lg:border-zinc-800">
+        <div className="flex flex-col items-start justify-center gap-6 px-8 py-12 lg:w-[420px] lg:border-r lg:border-zinc-200 lg:px-12 lg:py-16">
           {member.image ? (
             <Image
               src={member.image}
@@ -53,20 +53,20 @@ export default async function BookingPage({ params }) {
             </div>
           )}
 
-          <div className="text-center lg:text-left">
-            <h1 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
+          <div className="text-left">
+            <h1 className="text-3xl font-bold tracking-tight text-zinc-900">
               {member.name}
             </h1>
-            <p className="mt-1 text-lg font-medium text-zinc-500 dark:text-zinc-400">
+            <p className="mt-1 text-lg font-medium text-zinc-500">
               {member.role}
             </p>
           </div>
 
-          <p className="max-w-sm whitespace-pre-line text-center text-base leading-relaxed text-zinc-600 lg:text-left dark:text-zinc-400">
+          <p className="max-w-sm whitespace-pre-line text-center text-base leading-relaxed text-zinc-600 lg:text-left">
             {member.bio}
           </p>
 
-          <div className="flex items-center gap-2 rounded-full bg-zinc-100 px-4 py-2 text-sm font-medium text-zinc-600 dark:bg-zinc-800 dark:text-zinc-300">
+          <div className="flex items-center gap-2 rounded-full bg-zinc-100 px-4 py-2 text-sm font-medium text-zinc-600">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -89,7 +89,7 @@ export default async function BookingPage({ params }) {
         <div className="flex min-h-[700px] flex-1 items-stretch p-4 lg:p-8">
           <iframe
             src={member.calendarUrl}
-            className="w-full flex-1 rounded-xl border border-zinc-200 bg-white shadow-sm dark:border-zinc-800"
+            className="w-full flex-1 rounded-xl border border-zinc-200 bg-white shadow-sm"
             style={{ border: 0 }}
             title={`Book a meeting with ${member.name}`}
           />
