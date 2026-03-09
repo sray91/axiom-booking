@@ -12,9 +12,10 @@ export const team = [
   {
     slug: "ryan-cahalane",
     name: "Ryan Cahalane",
-    role: "",
+    role: "Managing Director",
     initials: "RC",
     color: "bg-emerald-500",
+    image: "/ryan-cahalane-pfp.jpeg",
     calendarUrl:
       "https://calendar.google.com/calendar/appointments/schedules/REPLACE_WITH_RYAN_SCHEDULE_ID?gv=true",
   },
