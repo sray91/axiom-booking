@@ -8,7 +8,7 @@ export const team = [
     image: "/dan-goss-pfp.jpeg",
     bio: "Book a call with Dan to explore how Axiom can help your enterprise scale. With deep expertise in strategic partnerships and tailored solutions, Dan will help you find the right fit for your team.",
     calendarUrl:
-      "https://calendar.google.com/calendar/appointments/schedules/REPLACE_WITH_DAN_SCHEDULE_ID?gv=true",
+      "https://calendar.google.com/calendar/appointments/schedules/AcZssZ2x2HJoUx5lMbNgWy2oknfml26GBfoV_y2A91nUB7LQFr6DE-2bdgrB6DNC-BiDY7lC2FfZCRbP?gv=true",
   },
   {
     slug: "ryan-cahalane",
