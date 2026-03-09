@@ -62,7 +62,7 @@ export default async function BookingPage({ params }) {
             </p>
           </div>
 
-          <p className="max-w-sm text-center text-base leading-relaxed text-zinc-600 lg:text-left dark:text-zinc-400">
+          <p className="max-w-sm whitespace-pre-line text-center text-base leading-relaxed text-zinc-600 lg:text-left dark:text-zinc-400">
             {member.bio}
           </p>
 
